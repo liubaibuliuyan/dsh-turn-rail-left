@@ -1,0 +1,57 @@
+{
+  "name": "@liubaibuliuyan/dsh-turn-rail-left",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Mirrors the conversation's built-in turn navigation rail into the left gutter of DeepSeek Harness, keeping ticks, hover previews, click-to-jump and history paging untouched.",
+  "icon": "./icon.svg",
+  "keywords": [
+    "dsh-plugin",
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "ui",
+    "turn",
+    "rail",
+    "navigation"
+  ],
+  "license": "MIT",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "assets",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node scripts/check.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots"
+      ]
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.2-rc.3",
+    "node": ">=20"
+  }
+}

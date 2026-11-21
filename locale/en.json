@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Left turn rail",
+    "description": "Moves the conversation's turn navigation rail from the right gutter to the left gutter. Ticks, hover previews, click-to-jump and loading of not-yet-loaded turns stay the built-in behavior; only the side changes. The rail appears from the second turn on and hides itself when the transcript column is narrower than 900px, as it always did. Turn the bundle off in Plugins to get the right-side rail back."
+  }
+}
